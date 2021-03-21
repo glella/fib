@@ -45,6 +45,6 @@ Showing only recursive as iterative versions are too fast: they take 0.000 secs 
 | Ruby 3.0  |   26.840    |    recursive       | ruby fib.rb                                 |
 | Ruby 3.0  |    8.821    |  recursive + jit   | ruby --jit-wait fib.rb                      |
 | Crystal   |    1.452    |    recursive       | crystal build --release -Dpreview_mt fib.cr |
-| Rust      |    0.858    |    recursive       | rustc -C opt-level=3 fib.rs                 |
+| Rust      |    0.858    |    recursive       | rustc -O fib.rs                             |
 | Go        |             |                    |                                             |
 | Python 3  |             |                    |                                             |
