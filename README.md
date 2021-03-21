@@ -21,7 +21,9 @@ printf("elapsed time: %5.3f s.\n", elapsed_time)
 
 
 Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catalina):
-Unordered: ordered as coded. 
+
+Ordered as coded. 
+
 Prints: 433494437.
 
 
