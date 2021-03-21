@@ -27,9 +27,11 @@ Ordered as coded.
 Prints: 433494437.
 
 
-| Language  | secs.millis | single / concurrent  | command                        |
-| --------- | ----------- | -------------------- | ------------------------------ |
-| Ruby 3.0  |   27.759    |       single         | ruby fib.rb                    |
-| Ruby 3.0  |    8.865    |       single         | ruby --jit-wait fib.rb         |
-| Ruby 3.0  |   crashes   | concurrent - ractors | ruby --jit-wait fib_ractors.rb |
-|           |             |                      |                                | 
+| Language  | secs.millis | single / concurrent  | command                                     |
+| --------- | ----------- | -------------------- | ------------------------------------------- |
+| Ruby 3.0  |   27.759    |       single         | ruby fib.rb                                 |
+| Ruby 3.0  |    8.865    |       single         | ruby --jit-wait fib.rb                      |
+| Ruby 3.0  |   crashes   | concurrent - ractors | ruby --jit-wait fib_ractors.rb              |
+| Crystal   |    1.478    |       single         | crystal build --release -Dpreview_mt fib.cr |
+|           |             |                      |                                             |
+
