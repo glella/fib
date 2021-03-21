@@ -24,8 +24,9 @@ Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catali
 Unordered: ordered as coded. Prints: 433494437.
 
 
-| Language  | secs.millis | single / concurrent | command                |
-| --------- | ----------- | ------------------- | ---------------------- |
-| Ruby 3.0  |   27.759    |       single        | ruby fib.rb            |
-| Ruby 3.0  |    8.865    |       single        | ruby --jit-wait fib.rb |
-|           |             |                     |                        |
+| Language  | secs.millis | single / concurrent  | command                        |
+| --------- | ----------- | -------------------- | ------------------------------ |
+| Ruby 3.0  |   27.759    |       single         | ruby fib.rb                    |
+| Ruby 3.0  |    8.865    |       single         | ruby --jit-wait fib.rb         |
+| Ruby 3.0  |   crashes   | concurrent - ractors | ruby --jit-wait fib_ractors.rb |
+|           |             |                      |                                | 
