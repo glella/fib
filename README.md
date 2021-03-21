@@ -48,4 +48,4 @@ Showing only recursive as iterative versions are way faster. (So much faster tha
 | Rust 1.50.0    |    0.858    |    recursive          | rustc -O fib.rs                             |
 | Go 1.16.1      |    1.740    |    recursive          | go build fib.go                             |
 | Python 3.9.2   |  113.887    |    recursive          | python fib.py                               |
-| Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py (inludes compilation time!)  |
+| Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py (includes compilation time!) |
