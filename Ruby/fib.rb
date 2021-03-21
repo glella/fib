@@ -15,10 +15,17 @@ def fib_iterative(n)
 	a
 end
 
+# def prompt(*args)
+#     print(*args)
+#     gets
+# end
+
 start_time = Time.now
 puts fib_recursive(42)
 elapsed_time = Time.now - start_time
 printf("Seconds Recursive took: %5.3f s.\n", elapsed_time)
+
+# n = (prompt "Fib number: ").to_i
 
 start_time = Time.now
 puts fib_iterative(42)

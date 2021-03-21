@@ -37,14 +37,15 @@ Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catali
 
 42nd number: 267914296. 
 
-Showing only recursive as iterative versions are too fast: they take 0.000 secs in any language!
+Showing only recursive as iterative versions are way faster. (So much faster that had to double check compilers were not computing it at compile time).
 
 
-| Language  | secs.millis |       method       | command                                     |
-| --------- | ----------- | -------------------| ------------------------------------------- |
-| Ruby 3.0  |   26.840    |    recursive       | ruby fib.rb                                 |
-| Ruby 3.0  |    8.821    |  recursive + jit   | ruby --jit-wait fib.rb                      |
-| Crystal   |    1.452    |    recursive       | crystal build --release -Dpreview_mt fib.cr |
-| Rust      |    0.858    |    recursive       | rustc -O fib.rs                             |
-| Go        |             |                    |                                             |
-| Python 3  |             |                    |                                             |
+| Language       | secs.millis |       method          | command                                     |
+| -------------- | ----------- | --------------------- | ------------------------------------------- |
+| Ruby 3.0       |   26.840    |    recursive          | ruby fib.rb                                 |
+| Ruby 3.0       |    8.821    |  recursive + jit      | ruby --jit-wait fib.rb                      |
+| Crystal 0.36.1 |    1.452    |    recursive          | crystal build --release -Dpreview_mt fib.cr |
+| Rust 1.50.0    |    0.858    |    recursive          | rustc -O fib.rs                             |
+| Go 1.16.1      |    1.740    |    recursive          | go build fib.go                             |
+| Python 3.9.2   |  113.887    |    recursive          | python fib.py                               |
+| Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py                              |
