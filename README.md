@@ -25,3 +25,11 @@ end
 
 puts fib(46)
 ```
+
+Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catalina):
+
+
+| Language  | Time secs.millis |
+| --------- | ---------------- |
+| Ruby      | x                |
+| x         | x                |
