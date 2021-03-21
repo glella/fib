@@ -2,7 +2,7 @@
 Recursive Fibonacci Benchmark - Multiple languages. 
 
 The goal is to check if performance between languages and platforms behave in the same fashion as on my primes by trial division benchmark.
-(Follows the same idea as drujensen/fib but will add concurrency)
+Follows the same idea as drujensen/fib but will add concurrency when possible.
 
 Here is the single thread Ruby version:
 
@@ -12,24 +12,19 @@ def fib(n)
   fib(n - 1) + fib(n - 2)
 end
 
-puts fib(46)
+start_time = Time.now
+puts fib(42)
+elapsed_time = Time.now - start_time
+printf("elapsed time: %5.3f s.\n", elapsed_time)
 ```
 
-Here is the single thread Crystal version:
-
-```
-def fib(n : UInt64)
-  return 1_u64 if n <= 1
-  fib(n - 1) + fib(n - 2)
-end
-
-puts fib(46)
-```
 
 Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catalina):
+Unordered: ordered as coded. Prints: 433494437.
 
 
-| Language  | Time secs.millis |
-| --------- | ---------------- |
-| Ruby      | x                |
-| x         | x                |
+| Language  | secs.millis | single / concurrent | command                |
+| --------- | ----------- | ------------------- | ---------------------- |
+| Ruby 3.0  |   27.759    |       single        | ruby fib.rb            |
+| Ruby 3.0  |    8.865    |       single        | ruby --jit-wait fib.rb |
+|           |             |                     |                        |
