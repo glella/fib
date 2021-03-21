@@ -1,5 +1,5 @@
 # Both fib and fib2 approaches work but cannot see which is faster as Ruby crashes
-# with inputs over 15. Perhaps concurrency will not help speed sulution up. 
+# with inputs over 15. Perhaps concurrency will not help speed solution up. 
 # Will check with Crystal, Rust and Go
 
 def fib(n)
