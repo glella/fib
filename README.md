@@ -1,36 +1,50 @@
 # fib
-Recursive Fibonacci Benchmark - Multiple languages. 
+Recursive & Iterative Fibonacci Benchmark - Multiple languages. 
 
-The goal is to check if performance between languages and platforms behave in the same fashion as on my primes by trial division benchmark.
+Performance compare between languages and platforms using recursion & iteration.
 
-Will solve it recusively but will add other methods like iterators for comparison.
-
-Here is the recursive Ruby version:
+Here is the Ruby version:
 
 ```
-def fib(n)
-    return 1 if n <= 1
-    fib(n - 1) + fib(n - 2)
+def fib_recursive(n)
+  	return n if n <= 1
+  	fib_recursive(n - 1) + fib_recursive(n - 2)
+end
+
+def fib_iterative(n)
+	a = 0
+	b = 1
+	(0...n).each {
+		c = a + b
+		a, b = b, c
+	}
+	a
 end
 
 start_time = Time.now
-puts fib(42)
+puts fib_recursive(42)
 elapsed_time = Time.now - start_time
-printf("elapsed time: %5.3f s.\n", elapsed_time)
+printf("Seconds Recursive took: %5.3f s.\n", elapsed_time)
+
+start_time = Time.now
+puts fib_iterative(42)
+elapsed_time = Time.now - start_time
+printf("Seconds Iterative took: %5.3f s.\n", elapsed_time)
 ```
 
 
 Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catalina):
 
-Ordered as coded. 
+42nd number: 267914296. 
 
-Prints: 433494437.
+Showing only recursive as iterative versions are too fast: they take 0.000 secs in any language!
 
 
 | Language  | secs.millis |       method       | command                                     |
 | --------- | ----------- | -------------------| ------------------------------------------- |
-| Ruby 3.0  |   27.759    |    recursive       | ruby fib.rb                                 |
-| Ruby 3.0  |    8.865    |  recursive + jit   | ruby --jit-wait fib.rb                      |
-| Crystal   |    1.478    |    recursive       | crystal build --release -Dpreview_mt fib.cr |
-|           |             |                    |                                             |
-
+| Ruby 3.0  |   26.840    |    recursive       | ruby fib.rb                                 |
+| Ruby 3.0  |    8.821    |  recursive + jit   | ruby --jit-wait fib.rb                      |
+| Crystal   |    1.452    |    recursive       | crystal build --release -Dpreview_mt fib.cr |
+| Rust      |    0.858    |    recursive       | rustc -C opt-level=3 fib.rs                 |
+| Go        |             |                    |                                             |
+| Python 3  |             |                    |                                             |
