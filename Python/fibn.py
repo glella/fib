@@ -18,10 +18,6 @@ def fib_iterative(n):
 		a, b = b, c
 	return a
 
-
-# DO NOT TIME THIS: compiled when used the first time. 2nd time will used compied version from cache:
-discard = fib_recursive(42)
-
 t1 = time.time()
 print(fib_recursive(42))
 t2 = time.time()
