@@ -20,6 +20,7 @@ def fib(n)
 	x.take() + y.take() 
 end
 
+# don't think it will be an improvement. Workd well but cannot measure
 def fib2(n)
 	return 1 if n <= 1
   	
