@@ -49,3 +49,4 @@ Showing only recursive as iterative versions are way faster. (So much faster tha
 | Go 1.16.1      |    1.740    |    recursive          | go build fib.go                             |
 | Python 3.9.2   |  113.887    |    recursive          | python fib.py                               |
 | Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py (includes compilation time!) |
+| Swift 5.3.2    |    1.400    |    recursive          | (xcode release)                             |
