@@ -51,3 +51,4 @@ Showing only recursive as iterative versions are way faster. (So much faster tha
 | Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py (includes compilation time!) |
 | Swift 5.3.2    |    1.400    |    recursive          | (xcode release)                             |
 | C clang 12.0.0 |    1.288    |	recursive          | clang -O3 fib.c -o fib                      |
+| Zig 0.8.0      |    1.481    |    recursive          | zig build-exe fib.zig -O ReleaseSafe        |
