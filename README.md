@@ -45,8 +45,9 @@ Showing only recursive as iterative versions are way faster. (So much faster tha
 | Ruby 3.0       |   26.840    |    recursive          | ruby fib.rb                                 |
 | Ruby 3.0       |    8.821    |  recursive + jit      | ruby --jit-wait fib.rb                      |
 | Crystal 0.36.1 |    1.452    |    recursive          | crystal build --release -Dpreview_mt fib.cr |
-| Rust 1.50.0    |    0.858    |    recursive          | rustc -O fib.rs                             |
+| Rust 1.50.0    |    0.853    |    recursive          | rustc -O fib.rs                             |
 | Go 1.16.1      |    1.740    |    recursive          | go build fib.go                             |
 | Python 3.9.2   |  113.887    |    recursive          | python fib.py                               |
 | Python 3.9.2   |    2.703    | recursive + numba jit | python fibn.py (includes compilation time!) |
 | Swift 5.3.2    |    1.400    |    recursive          | (xcode release)                             |
+| C clang 12.0.0 |    1.288    |	recursive          | clang -O3 fib.c -o fib                      |
