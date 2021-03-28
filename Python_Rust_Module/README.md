@@ -1,4 +1,5 @@
-#Build a fib Python module in Rust
+#fibrs
+A Python recursive fib module in Rust
 
 Following Matthias Endler's 'Hello Rust' #8 tutorial: 
 https://youtu.be/D9r__qxtRMQ
