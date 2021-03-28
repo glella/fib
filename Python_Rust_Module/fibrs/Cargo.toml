@@ -1,0 +1,18 @@
+[package]
+name = "fibrs"
+version = "0.1.0"
+authors = ["Guillermo Lella <arkorott@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]
+name = "fibrs"
+
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
+
+
+
