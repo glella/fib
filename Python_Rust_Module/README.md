@@ -68,5 +68,5 @@ rustflags = [
 
 9- python setup.py install
 
-10- Try it from another directory - open a terminal and import the module
+10- Try it from another directory - open a terminal and Python REPL and import the module
 
