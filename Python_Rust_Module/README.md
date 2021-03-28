@@ -27,7 +27,7 @@ cargo new --lib fibrs
 3- Copy setup.py and adapt for your project
 
 4- Setup Cargo.toml lib and dependencies using: cargo add pyo3
-and configuring Cargo.toml follows:
+and configuring Cargo.toml as follows:
 
 ```
 [lib]
