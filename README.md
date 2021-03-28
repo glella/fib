@@ -39,6 +39,13 @@ Results on a Late 2013 15" Macbook Pro (2.3 GHz Quad-Core i7 - 16GB RAM - Catali
 
 Showing only recursive as iterative versions are way faster. (So much faster that had to double check compilers were not computing it at compile time).
 
+Rust is significantly faster by far. (My #1 choice)
+Crystal delivers impresive performance compared to C, Go, Swift and Zig. And a pleasure to use. 
+V is fun to code with - needs to mature a bit more.
+Python and Ruby improve performance significantly using jit.
+Rust module for Python delivers same speed as native Rust! (see separate rust module project)
+Will try the same for Ruby
+
 
 | Language       | secs.millis |       method          | command                                     |
 | -------------- | ----------- | --------------------- | ------------------------------------------- |

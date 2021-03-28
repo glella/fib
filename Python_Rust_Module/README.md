@@ -1,10 +1,11 @@
-##Build a fib Python module in Rust
+#Build a fib Python module in Rust
+
 Following Matthias Endler's 'Hello Rust' #8 tutorial: 
 https://youtu.be/D9r__qxtRMQ
 Updated instructions from library pyo3: 
 https://pyo3.rs/v0.8.0/get_started.html
 
-#Steps
+Steps:
 
 1- Install setuptools_rust
 
