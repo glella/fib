@@ -1,8 +1,8 @@
-// Iterative & Recursive solutions
 // rustc -O fib.rs
+
 use std::time::Instant;
 
-fn fib_iterative(n: u64) -> u64 {
+fn fib_iterative(n: u32) -> u32 {
     let mut a = 0;
     let mut b = 1;
     for _ in 0..n {
@@ -13,7 +13,7 @@ fn fib_iterative(n: u64) -> u64 {
     a
 }
 
-fn fib_recursive(n: u64) -> u64 {
+fn fib_recursive(n: u32) -> u32 {
     if n <= 1 {
         return n;
     }

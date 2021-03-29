@@ -1,9 +1,7 @@
-#ruby --jit-wait fib.rb
+# ruby fib_rust_gem.rb
+# ruby --jit-wait fib_rust_gem.rb
 
-def fib_recursive(n)
-  	return n if n <= 1
-  	fib_recursive(n - 1) + fib_recursive(n - 2)
-end
+require 'Fib'
 
 def fib_iterative(n)
 	a = 0
@@ -16,7 +14,7 @@ def fib_iterative(n)
 end
 
 start_time = Time.now
-puts fib_recursive(42)
+puts Fib[42]
 elapsed_time = Time.now - start_time
 printf("Seconds Recursive took: %5.3f s.\n", elapsed_time)
 

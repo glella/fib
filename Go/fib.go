@@ -1,4 +1,4 @@
-//  go build fib.go
+// go build fib.go
 
 package main
 

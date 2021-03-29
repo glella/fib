@@ -1,5 +1,6 @@
 # crystal build --release -Dpreview_mt fib.cr
 
+# It is faster using UInt64 than UInt32 !?
 def fib_recursive(n : UInt64)
   return n if n <= 1
   fib_recursive(n - 1) + fib_recursive(n - 2)

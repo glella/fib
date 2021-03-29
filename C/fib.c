@@ -1,4 +1,5 @@
 // clang -O3 fib.c -o fib
+
 #include <stdio.h>
 #include <stdint.h>
 #import <time.h>
