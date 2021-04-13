@@ -18,7 +18,6 @@ proc fib_iterative(n: int): int =
     return a
 
 template benchmark(benchmarkName: string, code: untyped) =
-  block:
     let t0 = epochTime()
     code
     let elapsed = epochTime() - t0
@@ -26,7 +25,7 @@ template benchmark(benchmarkName: string, code: untyped) =
     echo "Seconds [", benchmarkName, "] ", elapsedStr
 
 benchmark "Recursive":
-  echo(fib_recursive(42))
+    echo(fib_recursive(42))
 
 benchmark "Iterative":
     echo(fib_iterative(42))
