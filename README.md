@@ -63,3 +63,4 @@ Rust Python Module and Rust Ruby Gem deliver same speed as native Rust!
 | C clang 12.0.0 |    1.295    | faster using uint64_t | clang -O3 fib.c -o fib                      |
 | Zig 0.8.0      |    1.484    | faster using u64      | zig build-exe fib.zig -O ReleaseSafe        |
 | V 0.2.2        |    2.310    | faster using u64      | v -autofree fib.v                           |
+| Nim 1.4.4      |    1.515    | recursive             | nim c -d:release fib.nim                    |
